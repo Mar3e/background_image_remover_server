@@ -1,3 +1,8 @@
-from image_background_remover import remove_background
+from fastapi import FastAPI
 
-remove_background("Images/20201130_191245.jpg")
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return {"Hello": "World"}
